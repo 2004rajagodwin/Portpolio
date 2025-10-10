@@ -24,7 +24,7 @@ const About = () => {
       <section className="section">
         <div className="container">
           <h1 className="section-title">About Me</h1>
-          <div className="about-content" style={{ display: 'flex', gap: '3rem', alignItems: 'center'  }}>
+          <div className="about-content" style={{  }}>
             {/* Left Side - Unique Profile Card Design */}
             <div className="profile-card" style={{ flex: '1', minWidth: '300px' }}>
               <div 
