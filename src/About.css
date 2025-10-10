@@ -460,7 +460,11 @@
   .about-title {
     font-size: 1.8rem;
   }
-  
+  .about-content{
+  flex-direction: column;
+}
+
+
   .profile-img {
     height: 400px;
   }
