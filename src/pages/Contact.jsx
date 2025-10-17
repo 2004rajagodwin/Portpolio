@@ -136,7 +136,7 @@ const Contact = () => {
             <div className="contact-form-wrapper">
               <div className="form-card">
                 <h2 className="form-title">Send Message</h2>
-                <form onSubmit={handleSubmit} className="contact-form">
+                <form onSubmit={handleSubmit} className="contact-form" >
                   <div className="form-group">
                     <label htmlFor="name" className="form-label">Full Name</label>
                     <input

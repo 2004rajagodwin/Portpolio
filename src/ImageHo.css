@@ -1,0 +1,71 @@
+.new-ava-logo-con-section {
+  background: #f9f9f9;
+  position: relative;
+  padding: 60px 0;
+}
+
+.new-ava-logo-con-section-pt {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 45px;
+  margin-top: 20px;
+}
+
+.new-ava-logo-con-section .sector-item {
+  position: relative;
+  padding: 22px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.new-ava-logo-con-section .sector-item:hover {
+  color: #000;
+}
+
+.new-ava-logo-con-section-h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.new-ava-logo-con-section-sp {
+  font-weight: 300;
+}
+
+/* Hover Image Box */
+.new-ava-logo-con-section .hover-box {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 120px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.new-ava-logo-con-section .sector-item:hover .hover-box {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.new-ava-logo-con-section .hover-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .new-ava-logo-con-section .hover-box {
+    display: none;
+  }
+}

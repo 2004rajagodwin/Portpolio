@@ -1,0 +1,80 @@
+.ava-footer-section {
+  background-color: #001746;
+  color: #b8c2d0;
+  position: relative;
+}
+
+.ava-footer-section h5,
+.ava-footer-section h6 {
+  color: #fff;
+}
+
+.ava-footer-links li a {
+  color: #b8c2d0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ava-footer-links li a:hover {
+  color: #3d9bff;
+}
+
+.ava-footer-social {
+  background-color: #0b2a5b;
+  color: #fff;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.ava-footer-social:hover {
+  background-color: #3d9bff;
+  color: #fff;
+}
+
+.ava-footer-bottom-link {
+  color: #b8c2d0;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.ava-footer-bottom-link:hover {
+  color: #3d9bff;
+}
+
+.ava-footer-scrolltop {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #1667ff;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ava-footer-scrolltop:hover {
+  background-color: #0a3faa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .ava-footer-section {
+    text-align: center;
+  }
+
+  .ava-footer-social {
+    margin: 0 auto;
+  }
+
+  .ava-footer-scrolltop {
+    left: 90%;
+  }
+}

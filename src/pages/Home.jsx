@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom'
 import GodwinTechSlider from '../components/GodwinTechSlider';
 import About from '../pages/About'
 import WhyChooseBrick from '../components/WhyChooseBrick'
+import OurPro from '../components/OurPro';
+import ImageHo from '../components/ImageHo';
+import GodBlog from '../components/GodBlog';
+import GodServi from '../components/GodServi';
+import GodTesti from '../components/God-testi';
+
+
+
+
+
 
 
 const Home = () => {
@@ -29,6 +39,14 @@ const Home = () => {
 <About/>
 
 <WhyChooseBrick/>
+<OurPro/>
+<ImageHo/>
+<GodBlog/>
+<GodServi/>
+
+
+
+
 
       <section className="section">
         <div className="container">
@@ -48,7 +66,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>  
 
 
       

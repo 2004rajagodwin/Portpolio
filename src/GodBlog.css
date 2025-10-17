@@ -1,0 +1,143 @@
+.godwin-techp-blog-section {
+  background: #f8f9fa;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.ava-godwin-blo-h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tri-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.tri-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.tri-col {
+  flex: 1 1 calc(33.333% - 30px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* Shine effect */
+.tri-col::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(25deg);
+  transition: all 0.6s ease-in-out;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tri-col:hover::before {
+  top: 100%;
+  left: 100%;
+}
+
+.tri-blog-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.tri-date-ribbon {
+  position: absolute;
+  top: 170px;
+  left: 15px;
+  background: #0053d6;
+  color: #fff;
+  padding: 8px 40px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 3px;
+  clip-path: polygon(0 0, calc(100% - 30px) 0%, 100% 120%, 0% 120%);
+  z-index: 3;
+}
+
+.tri-blog-content {
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.tri-blog-meta {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.tri-blog-meta i {
+  margin-right: 3px;
+}
+
+.tri-blog-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.tri-blog-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tri-col:hover .tri-blog-title a {
+  color: #0053d6;
+}
+
+.tri-blog-desc {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .tri-col {
+    flex: 1 1 calc(50% - 30px);
+  }
+}
+
+@media (max-width: 576px) {
+  .tri-col {
+    flex: 1 1 100%;
+  }
+
+  .tri-date-ribbon {
+    top: 160px;
+  }
+}

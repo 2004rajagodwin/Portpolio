@@ -1,0 +1,192 @@
+
+
+
+
+.brick-new-ho-de-services {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.brick-new-ho-de-card {
+  position: relative;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: flex 0.6s ease, transform 0.5s ease;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.brick-new-ho-de-col {
+  flex: 1;
+  display: flex;
+  padding: 0 5px;
+  transition: flex 0.6s ease;
+}
+
+.brick-new-ho-de-col.expanded {
+  flex: 3;
+}
+
+/* Hover expand */
+.brick-new-ho-de-col:hover {
+  flex: 3;
+}
+
+/* Overlay */
+.brick-new-ho-de-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.2));
+  transition: background 0.3s ease;
+}
+
+/* Hidden content */
+.brick-new-ho-de-content {
+  position: relative;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 2;
+  text-align: left;
+}
+
+/* Show content for expanded */
+.brick-new-ho-de-col.expanded .brick-new-ho-de-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brick-new-ho-de-card h5 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.brick-new-ho-de-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.brick-new-ho-de-card a {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #0053d6;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.text-warning-a{
+    color: #0053d6;
+}
+.brick-new-ho-de-card a:hover {
+  background: #0053d6;
+}
+
+/* Vertical title */
+.brick-new-ho-de-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.brick-new-ho-de-col.expanded .brick-new-ho-de-title {
+  opacity: 0;
+}
+
+/* Show full content on hover */
+.brick-new-ho-de-col:hover .brick-new-ho-de-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide title on hover */
+.brick-new-ho-de-col:hover .brick-new-ho-de-title {
+  opacity: 0;
+}
+
+/* Backgrounds */
+.brick-new-ho-de-residential {
+  background-image: url(../src/assets/a1.jpg);
+}
+.brick-new-ho-de-commercial {
+  background-image: url(../src/assets/a2.jpg);
+}
+.brick-new-ho-de-institutional {
+  background-image: url(../src/assets/a3.jpg);
+}
+.brick-new-ho-de-industrial {
+  background-image: url(../src/assets/a4.jpg);
+}
+.brick-new-ho-de-other {
+  background-image: url(../src/assets/a5.jpg);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .brick-new-ho-de-card {
+    height: 350px;
+  }
+  .brick-new-ho-de-col.expanded,
+  .brick-new-ho-de-col:hover {
+    flex: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .brick-new-ho-de-services {
+    padding: 40px 0;
+  }
+  .brick-new-ho-de-card {
+    height: 300px;
+  }
+  .brick-new-ho-de-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .brick-new-ho-de-col {
+    padding: 0;
+  }
+  .brick-new-ho-de-col,
+  .brick-new-ho-de-col.expanded,
+  .brick-new-ho-de-col:hover {
+    flex: 1 1 auto;
+  }
+  .brick-new-ho-de-title {
+    transform: translate(-50%, -50%) rotate(0);
+    font-size: 16px;
+  }
+  .brick-new-ho-de-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .brick-new-ho-de-title {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .brick-new-ho-de-card {
+    height: 250px;
+  }
+  .brick-new-ho-de-card h5 {
+    font-size: 18px;
+  }
+  .brick-new-ho-de-card p {
+    font-size: 13px;
+  }
+}
