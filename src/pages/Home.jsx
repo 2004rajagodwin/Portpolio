@@ -6,7 +6,7 @@ import OurPro from '../components/OurPro';
 import ImageHo from '../components/ImageHo';
 import GodBlog from '../components/GodBlog';
 import GodServi from '../components/GodServi';
-import GodTesti from '../components/God-testi';
+
 
 
 
