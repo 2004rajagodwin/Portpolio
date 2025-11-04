@@ -32,7 +32,7 @@ const Header = () => {
         <div className="gt-topbar-left" data-aos="fade-down-right">
          <a href="mailto:godwinraja62@gmail.com" className="go-top-nav-atag"> <span><FaEnvelope /> godwinraja62@gmail.com</span></a>
          <a href="https://maps.app.goo.gl/82qgEE2Kw4ZQbV5t9" className="go-top-nav-atag"> <span><FaMapMarkerAlt /> Thirunelveli</span></a>
-         <a href="tel:6379362330" className="go-top-nav-atag"> <span><FaPhoneAlt /> +91-6379362331</span></a>
+         <a href="tel:6379362330" className="go-top-nav-atag"> <span><FaPhoneAlt /> +91-6379362330</span></a>
         </div>
         <div className="gt-topbar-right" data-aos="fade-down-left">
           <a href="https://www.facebook.com/share/1BMigYcLMy/"><FaFacebookF /></a>
