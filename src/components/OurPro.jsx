@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
 import strategyImg from "../assets/strategyImg.jpg";
 import designImg from "../assets/designImg.jpg";
 import growthImg from "../assets/growthImg.jpg";
-import '../OurPro.css';
+
+import "../OurPro.css";
 
 const OurPro = () => {
+  useAOS(); // ✅ Initialize AOS
   const steps = [
     {
       id: 1,
@@ -36,7 +39,7 @@ const OurPro = () => {
       <div className="container">
         <div className="row align-items-start">
           {/* Left Side */}
-          <div className="col-lg-6 mb-4">
+          <div className="col-lg-6 mb-4" data-aos="fade-right">
             <span className="ourpro-subtitle d-inline-block mb-2">
               ★ OUR PROCESS
             </span>
@@ -47,14 +50,21 @@ const OurPro = () => {
               We follow a systematic methodology to ensure your project delivers
               maximum impact and meets your business objectives effectively.
             </p>
-            <button className="btn ourpro-btn">Explore more</button>
+
+            {/* React Router Link instead of button */}
+            <Link to="/contact" className="ourpro-btn">
+              Explore More
+            </Link>
           </div>
 
           {/* Right Side */}
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-left">
             {steps.map((step) => (
-              <div className="ourpro-step d-flex align-items-start mb-4" key={step.id}>
-                <div className="ourpro-step-image me-3">
+              <div
+                className="ourpro-step d-flex align-items-start mb-4"
+                key={step.id}
+              >
+                <div className="ourpro-step-image me-3 position-relative">
                   <img
                     src={step.image}
                     alt={step.title}

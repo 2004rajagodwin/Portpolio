@@ -1,7 +1,9 @@
 import React from 'react';
 import '../Skills.css';
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
 
 const Skills = () => {
+  useAOS(); // ✅ Initialize AOS
   const skillCategories = [
     {
       title: "Frontend Technologies",
@@ -34,7 +36,7 @@ const Skills = () => {
         { name: "Server-side Rendering", level: 80 },
         { name: "Microservices", level: 75 }
       ],
-      color: "#00FF88"
+      color: "#00D4FF"
     },
     {
       title: "Databases",
@@ -48,7 +50,7 @@ const Skills = () => {
         { name: "Query Optimization", level: 80 },
         { name: "ORM/ODM", level: 78 }
       ],
-      color: "#FF6B6B"
+      color: "#00D4FF"
     },
     // {
     //   title: "Tools & DevOps",
@@ -69,29 +71,29 @@ const Skills = () => {
     // }
   ];
 
-  const experienceLevels = [
-    {
-      level: "Expert",
-      color: "#00FF88",
-      skills: ["React.js", "JavaScript", "Node.js", "Git", "HTML5 & CSS3"],
-      description: "Deep expertise with extensive production experience",
-      projects: "50+ Projects"
-    },
-    {
-      level: "Advanced",
-      color: "#00D4FF",
-      skills: ["Vue.js", "TypeScript", "MongoDB", "AWS", "Tailwind CSS"],
-      description: "Strong proficiency with complex project experience",
-      projects: "30+ Projects"
-    },
-    {
-      level: "Intermediate",
-      color: "#FFD93D",
-      skills: ["Python", "Docker", "GraphQL", "PostgreSQL", "Django"],
-      description: "Solid understanding with hands-on project experience",
-      projects: "20+ Projects"
-    }
-  ];
+  // const experienceLevels = [
+  //   {
+  //     level: "Expert",
+  //     color: "#00FF88",
+  //     skills: ["React.js", "JavaScript", "Node.js", "Git", "HTML5 & CSS3"],
+  //     description: "Deep expertise with extensive production experience",
+  //     projects: "50+ Projects"
+  //   },
+  //   {
+  //     level: "Advanced",
+  //     color: "#00D4FF",
+  //     skills: ["Vue.js", "TypeScript", "MongoDB", "AWS", "Tailwind CSS"],
+  //     description: "Strong proficiency with complex project experience",
+  //     projects: "30+ Projects"
+  //   },
+  //   {
+  //     level: "Intermediate",
+  //     color: "#FFD93D",
+  //     skills: ["Python", "Docker", "GraphQL", "PostgreSQL", "Django"],
+  //     description: "Solid understanding with hands-on project experience",
+  //     projects: "20+ Projects"
+  //   }
+  // ];
 
   const stats = [
     { number: "50+", label: "Technologies", suffix: "Mastered" },
@@ -104,7 +106,7 @@ const Skills = () => {
     <section className="skills-section">
       <div className="container">
         {/* Premium Header */}
-        <div className="skills-header">
+        <div className="skills-header"  data-aos="fade-up">
           <div className="header-badge">TECHNICAL MASTERY</div>
           <h1 className="skills-main-title">
             Technical <span className="highlight">Excellence</span>
@@ -115,7 +117,7 @@ const Skills = () => {
         </div>
 
         {/* Stats Overview */}
-        <div className="stats-overview">
+        <div className="stats-overview" data-aos="flip-up">
           {stats.map((stat, index) => (
             <div key={index} className="stat-card">
               <div className="stat-number">{stat.number}</div>
@@ -128,7 +130,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="skills-categories-grid">
+        <div className="skills-categories-grid" data-aos="flip-down">
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
@@ -166,7 +168,7 @@ const Skills = () => {
         </div>
 
         {/* Experience Levels */}
-        <div className="experience-section">
+        {/* <div className="experience-section">
           <div className="section-header">
             <h2 className="section-title">Proficiency Spectrum</h2>
             <p className="section-subtitle">Comprehensive skill assessment across technology domains</p>
@@ -200,15 +202,15 @@ const Skills = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Technology Stack */}
-        <div className="tech-stack-section">
-          <div className="section-header">
+        <div className="tech-stack-section" > 
+          <div className="section-header"  data-aos="fade-up">
             <h2 className="section-title">Technology Stack</h2>
             <p className="section-subtitle">Comprehensive toolkit for modern web development</p>
           </div>
-          <div className="tech-stack-grid">
+          <div className="tech-stack-grid" data-aos="flip-up">
             <div className="tech-stack-category">
               <h4>Frontend</h4>
               <div className="tech-tags">

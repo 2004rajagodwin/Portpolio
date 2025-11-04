@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import godwinImage from '../assets/godwin.png'; // Correct import
+import { Link } from "react-router-dom";
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
 
 const About = () => {
+  useAOS(); // ✅ Initialize AOS
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showProfileDetail, setShowProfileDetail] = useState(false);
 
@@ -21,12 +24,12 @@ const About = () => {
 
   return (
     <>
-      <section className="section">
+      <section className="section" id='about-mainsection'>
         <div className="container">
           <h1 className="section-title">About Me</h1>
           <div className="about-content" style={{  }}>
             {/* Left Side - Unique Profile Card Design */}
-            <div className="profile-card" style={{ flex: '1', minWidth: '300px' }}>
+            <div data-aos="fade-right" className="profile-card" style={{ flex: '1', minWidth: '300px' }}>
               <div 
                 className="profile-card-container"
                 style={{
@@ -113,7 +116,7 @@ const About = () => {
   }}
 >
   {/* Profile Image - Fixed */}
-  <img 
+  <img  
     src={godwinImage}  // <-- Using the imported image variable
     alt="Godwin Raja"
     style={{
@@ -382,7 +385,7 @@ const About = () => {
             </div>
 
             {/* Right Side - About Text */}
-            <div className="about-text" style={{ flex: '2' }}>
+            <div  data-aos="fade-left" className="about-text" style={{ flex: '2' }}>
               <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#000039' }}>Hello! I'm Godwin Raja</h2>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: '#444' }}>
                 I'm a passionate Full Stack Web Developer with expertise in modern web technologies. 
@@ -423,46 +426,51 @@ const About = () => {
               </div>
               
               <div>
-                <a 
-                  href="/contact" 
-                  className="btn"
-                  style={{
-                    background: 'linear-gradient(135deg, #000039, #1a237e)',
-                    color: 'white',
-                    padding: '0.8rem 2rem',
-                    borderRadius: '50px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    fontWeight: '600',
-                    fontSize: '1rem',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 8px 20px rgba(0, 0, 57, 0.3)',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.transform = 'translateY(-3px)';
-                    e.target.style.boxShadow = '0 12px 25px rgba(0, 0, 57, 0.4)';
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = '0 8px 20px rgba(0, 0, 57, 0.3)';
-                  }}
-                >
-                  Let's Work Together
-                  <div 
-                    style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      background: 'linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent)',
-                      transform: 'translateX(-100%)',
-                      animation: 'shimmer 2s infinite'
-                    }}
-                  />
-                </a>
+               <Link 
+  to="/contact"
+  className="btn"
+  style={{
+    background: 'linear-gradient(135deg, #000039, #1a237e)',
+    color: 'white',
+    padding: '0.8rem 2rem',
+    borderRadius: '50px',
+    textDecoration: 'none',
+    display: 'inline-block',
+    fontWeight: '600',
+    fontSize: '1rem',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 8px 20px rgba(0, 0, 57, 0.3)',
+    position: 'relative',
+    overflow: 'hidden'
+  }}
+  onMouseOver={(e) => {
+    e.target.style.transform = 'translateY(-3px)';
+    e.target.style.boxShadow = '0 12px 25px rgba(0, 0, 57, 0.4)';
+  }}
+  onMouseOut={(e) => {
+    e.target.style.transform = 'translateY(0)';
+    e.target.style.boxShadow = '0 8px 20px rgba(0, 0, 57, 0.3)';
+  }}
+>
+  Let's Work Together
+  <div 
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: 'linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent)',
+      transform: 'translateX(-100%)',
+      animation: 'shimmer 2s infinite'
+    }}
+  />
+</Link>
+
+
+
+
+
               </div>
             </div>
           </div>
@@ -728,7 +736,13 @@ const About = () => {
                     }}
                   />
                 </a>
+
+
+                
               </div>
+
+
+              
             </div>
           </div>
         </div>

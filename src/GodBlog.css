@@ -1,7 +1,39 @@
+
+
+
+.godwin-techp-blog-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../src/assets/yyuu14.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+
+.godwin-techp-blog-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000039;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+
+
 .godwin-techp-blog-section {
-  background: #f8f9fa;
-  margin: 0;
-  padding: 40px 0;
+ 
+margin: 80px 0px;
+ color: #fff;
+  /* background-color: #000039; */
+  padding: 80px 0px;
+   position: relative;
+    overflow: hidden;
 }
 
 .ava-godwin-blo-h2 {

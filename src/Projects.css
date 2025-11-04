@@ -1,18 +1,22 @@
 :root {
-  --primary-bg: #000039;
+  --primary-bg: #fff !important;
   --card-bg: #0a0a4a;
-  --accent-blue: #00D4FF;
+  --accent-blue: #0053d6  !important;
   --accent-green: #00FF88;
   --accent-purple: #8B5FBF;
   --text-primary: #FFFFFF;
-  --text-secondary: #B8B8FF;
+  --text-secondary: #333333;
   --text-muted: #8B8BFF;
 }
 
 .projects-section {
-  padding: 100px 0;
+  padding: 80px 0;
   background: var(--primary-bg);
   min-height: 100vh;
+  padding-bottom: 0px;
+  background-image: url(../src/assets/w4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -20,7 +24,9 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-
+.godwcta-wrappera{
+  margin-bottom: 80px;
+}
 /* Header */
 .projects-header {
   text-align: center;
@@ -45,7 +51,7 @@
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-blue) 100%);
+  background: linear-gradient(135deg, #002b80 0%, #0053d6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +66,7 @@
 
 .projects-subtitle {
   font-size: 1.3rem;
-  color: var(--text-secondary);
+  color: #333333;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -92,16 +98,14 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+ color: #fff !important;
+ 
   margin-bottom: 10px;
 }
 
 .stat-label {
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: #FFF;
   font-weight: 500;
 }
 
@@ -136,7 +140,7 @@
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: var(--text-secondary);
+  color: #333333 !important;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -152,7 +156,7 @@
 
 .tab-button {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #0053d6;
   color: var(--text-secondary);
   padding: 12px 24px;
   border-radius: 25px;
@@ -162,11 +166,12 @@
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .tab-button:hover {
-  border-color: var(--accent-blue);
+  border-color: transparent;
+  background-color:#0053d6 ;
   color: var(--text-primary);
 }
 
@@ -322,4 +327,13 @@
   .projects-stats {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+
+
+.project-status.completed {
+  display: none;
+}
+.project-category{
+  display: none;
 }

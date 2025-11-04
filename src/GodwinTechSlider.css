@@ -279,6 +279,10 @@
   .slide-title {
     font-size: 2rem;
   }
+
+  .dots-container{
+    display: none !important;
+  }
   
   .slide-description {
     font-size: 1rem;
@@ -302,7 +306,7 @@
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 15px 35px;
+  padding: 10px 30px;
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 50px;
@@ -583,16 +587,19 @@
 
 @media (max-width: 480px) {
   .slide-title {
-    font-size: 2rem;
+    font-size: 30px;
+   
   }
   
   .slide-description {
-    font-size: 1rem;
+    font-size: 15px;
+  padding: 0px 50px;
   }
   
   .cta-button {
-    padding: 12px 25px;
-    font-size: 1rem;
+    padding: 8px 16px;
+    font-size: 15px;
+   
   }
   
   .nav-arrow {
@@ -600,4 +607,5 @@
     height: 40px;
     font-size: 1.2rem;
   }
+  
 }

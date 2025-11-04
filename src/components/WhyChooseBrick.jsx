@@ -5,10 +5,15 @@ import cv from '../assets/cv.png.png'; // Correct import
 import cva from '../assets/pv1.png.png'; // Correct import
 import cvb from '../assets/pv2.png.png'; // Correct import
 import cvc from '../assets/pv3.png.png'; // Correct import
+import { Link } from "react-router-dom";
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
+
 
 
 
 const WhyChooseBrick = () => {
+
+  useAOS(); // ✅ Initialize AOS
   return (
     <section className="why-ch-brick-main-section">
       <div className="container">
@@ -16,7 +21,7 @@ const WhyChooseBrick = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="why-ch-brick-left">
-                <h2 className="why-ch-brick-left-h2">
+                <h2 className="why-ch-brick-left-h2"  data-aos="fade-right">
                   Why Choose Godwin Tech as Your Thirunelveli Web Design?
                 </h2>
               </div>
@@ -28,9 +33,17 @@ const WhyChooseBrick = () => {
             <div className="col-md-3">
               <div className="why-ch-brick-rig">
                 <div className="brick-seo-value-right-budiv-2">
-                  <a className="brick-seo-value-right-button-2" href="">
-                    Explore more <i className="bi bi-arrow-right ms-2"></i>
-                  </a>
+                  {/* <a className="brick-seo-value-right-button-2" href="">
+                    Explore more 
+                  </a> */}
+
+
+  <Link  data-aos="fade-left"  to="/contact" className="brick-seo-value-right-button-2">
+              Explore More <i className="bi bi-arrow-right ms-2"></i>
+            </Link>
+
+
+
                 </div>
               </div>
             </div>
@@ -40,8 +53,8 @@ const WhyChooseBrick = () => {
         {/* col-div */}
         <div className="why-col-main-divvv">
           <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="why-col-main-divvv-conten">
+            <div className="col-lg-3 col-md-6 col-sm-12" >
+              <div className="why-col-main-divvv-conten"  data-aos="fade-up">
                 <div className="why-col-main-divvv-icon-div">
                   <img
                     className="why-col-main-divvv-iconimg"
@@ -58,7 +71,7 @@ const WhyChooseBrick = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="why-col-main-divvv-conten">
+              <div className="why-col-main-divvv-conten"  data-aos="fade-down">
                 <div className="why-col-main-divvv-icon-div">
                   <img
                     className="why-col-main-divvv-iconimg"
@@ -75,7 +88,7 @@ const WhyChooseBrick = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="why-col-main-divvv-conten">
+              <div className="why-col-main-divvv-conten"  data-aos="fade-up">
                 <div className="why-col-main-divvv-icon-div">
                   <img
                     className="why-col-main-divvv-iconimg"
@@ -92,7 +105,7 @@ const WhyChooseBrick = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="why-col-main-divvv-conten">
+              <div className="why-col-main-divvv-conten" data-aos="fade-down">
                 <div className="why-col-main-divvv-icon-div">
                   <img
                     className="why-col-main-divvv-iconimg"

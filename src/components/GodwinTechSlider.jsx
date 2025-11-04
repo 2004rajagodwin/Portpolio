@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../GodwinTechSlider.css';
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
 
 import go1 from '../assets/go1.jpg'; // Correct import
 import go2 from '../assets/go2.png'; // Correct import
@@ -8,13 +9,14 @@ import go3 from '../assets/go3.png'; // Correct import
 
 
 const GodwinTechSlider = () => {
+  useAOS(); // ✅ Initialize AOS
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
     {
       id: 1,
-      title: "Innovative Solutions",
+      title: "Thirunelveli Best Web Design Company",
       description: "Cutting-edge technology solutions for modern businesses",
       image: go1,
       cta: "Explore Solutions",
@@ -23,7 +25,7 @@ const GodwinTechSlider = () => {
     },
     {
       id: 2,
-      title: "AI & Machine Learning",
+      title: "Thirunelveli's Leading Digital Marketing",
       description: "Transform your business with intelligent automation",
       image:  go2,
       cta: "Learn More",
@@ -32,7 +34,7 @@ const GodwinTechSlider = () => {
     },
     {
       id: 3,
-      title: "Cloud Infrastructure",
+      title: "Let’s build success through collaboration.",
       description: "Scalable cloud solutions for growing enterprises",
       image:  go3,
       cta: "Get Started",
@@ -41,7 +43,7 @@ const GodwinTechSlider = () => {
     },
     {
       id: 4,
-      title: "Cybersecurity",
+      title: "Crafting Future-Ready IT Experiencesy",
       description: "Protect your digital assets with advanced security",
       image:  go1,
       cta: "Secure Now",
@@ -50,7 +52,7 @@ const GodwinTechSlider = () => {
     },
     {
       id: 5,
-      title: "Let's Build Together",
+      title: "Innovating Digital Solutions That Matter",
       description: "Partner with us to create extraordinary digital experiences",
       image:  go2,
       cta: "Let's Work Together",
@@ -83,7 +85,7 @@ const GodwinTechSlider = () => {
   };
 
   return (
-    <div className="godwin-slider">
+    <div className="godwin-slider" >
       <div 
         className="slider-container"
         onMouseEnter={() => setIsAutoPlaying(false)}
@@ -104,13 +106,13 @@ const GodwinTechSlider = () => {
               style={{ background: slide.gradient }}
             ></div>
             
-            <div className="slide-content">
+            <div className="slide-content" data-aos="fade-right" >
               <div className="content-wrapper">
-                <h2 className="slide-title">{slide.title}</h2>
+                <h2  className="slide-title">{slide.title}</h2>
                 <p className="slide-description">{slide.description}</p>
                 <Link to={slide.link} className="cta-button">
                   {slide.cta}
-                  <span className="arrow">→</span>
+                  <span className="arrow"></span>
                 </Link>
               </div>
             </div>

@@ -1,8 +1,46 @@
-.new-ava-logo-con-section {
+/* .new-ava-logo-con-section {
   background: #f9f9f9;
   position: relative;
   padding: 60px 0;
+  background-image: url(../src/assets/ways.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+} */
+.new-ava-logo-con-section {
+  position: relative;
+  padding: 60px 0;
+  background: #f9f9f9;
+  background-image: url(../src/assets/w2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
+
+/* gradient filter overlay */
+.new-ava-logo-con-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),   /* light at top */
+    rgba(207, 194, 194, 0.4)          /* darker at bottom */
+  );
+  z-index: 1;
+}
+
+/* keep actual section content above overlay */
+.new-ava-logo-con-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+
+
 
 .new-ava-logo-con-section-pt {
   font-size: 18px;

@@ -8,6 +8,10 @@ import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'; // ✅ ADD THIS LINE
+
+import "aos/dist/aos.css";
+
 
 
 

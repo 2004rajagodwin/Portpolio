@@ -1,7 +1,14 @@
 import React, { useEffect } from "react";
 import "../GodServi.css";
+import { Link } from "react-router-dom";
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
+
+
 
 const GodServi = () => {
+
+useAOS(); // ✅ Initialize AOS
+  
   useEffect(() => {
     const serviceCols = document.querySelectorAll(".brick-new-ho-de-col");
     const container = document.querySelector(".brick-new-ho-de-flex");
@@ -70,7 +77,8 @@ const GodServi = () => {
   ];
 
   return (
-    <div className="container brick-new-ho-de-services">
+   <section className="why-ch-brick-main-section-boq"data-aos="fade-up" >
+     <div className="container brick-new-ho-de-services">
       <h6 className="text-warning-a">OUR AWESOME SERVICES</h6>
       <h2 className="fw-bold mb-5">
         Comprehensive solutions for Every Websites Need
@@ -88,13 +96,22 @@ const GodServi = () => {
               <div className="brick-new-ho-de-content">
                 <h5>{service.title}</h5>
                 <p>{service.desc}</p>
-                <a href="#">Explore more →</a>
+               
+
+
+  <Link to="/contact" className="brick-new-ho-de-card-btaa" >
+         Explore more →
+            </Link>
+
+
+                
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+   </section>
   );
 };
 

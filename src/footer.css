@@ -1,5 +1,5 @@
 .ava-footer-section {
-  background-color: #001746;
+  background-color:#000039;
   color: #b8c2d0;
   position: relative;
 }
@@ -8,11 +8,18 @@
 .ava-footer-section h6 {
   color: #fff;
 }
+.ava-footer-section h6{
+  font-size: 22px;
+}
 
+#godwin-logo{
+  font-size: 28px;
+}
 .ava-footer-links li a {
   color: #b8c2d0;
   text-decoration: none;
   transition: color 0.3s ease;
+ 
 }
 
 .ava-footer-links li a:hover {

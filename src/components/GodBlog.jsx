@@ -1,12 +1,15 @@
 import React from "react";
 import "../GodBlog.css";
-
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
 
 import re1 from '../assets/logo-ava.jpg'; 
 import re2 from '../assets/logo-reo-13.jpg'; 
 import re3 from '../assets/soft-section4.webp'; 
 
 const GodBlog = () => {
+
+useAOS(); // ✅ Initialize AOS
+  
   const blogs = [
     {
       img: re1,
@@ -46,7 +49,7 @@ const GodBlog = () => {
         <h2 className="ava-godwin-blo-h2">Our Blog</h2>
         <div className="tri-row">
           {blogs.map((blog, index) => (
-            <div key={index} className="tri-col">
+            <div key={index} className="tri-col" data-aos="flip-left">
               <img src={blog.img} alt={blog.title} className="tri-blog-img" />
               <div className="tri-date-ribbon">{blog.date}</div>
               <div className="tri-blog-content">

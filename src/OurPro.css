@@ -1,6 +1,9 @@
 .ourpro-section {
   background: #f8fafc;
   font-family: "Inter", sans-serif;
+  /* background-image: url(../src/assets/br-1.png);
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .ourpro-subtitle {
@@ -27,7 +30,7 @@
   background: #0053d6 !important;
   color: white;
   padding: 12px 30px;
-  border-radius: 30px;
+  border-radius: 30px;text-decoration: none;
   font-weight: 600;
   border: none;
   transition: all 0.3s ease;
@@ -86,12 +89,34 @@
   line-height: 1.6;
 }
 
+
+
+
+
 @media (max-width: 992px) {
   .ourpro-title {
     font-size: 32px;
   }
-  .ourpro-step-image img {
-    width: 80px;
-    height: 80px;
+ 
+}
+
+
+@media screen and (max-width:992px) and (min-width:768px){
+
+ .ourpro-step-image img {
+    width: 109px;
+        height: 69px;
   }
+
+
+}
+
+
+@media screen and (max-width:767px){
+.ourpro-step-image img {
+   width: 180px;
+        height: 54px;
+  }
+
+
 }

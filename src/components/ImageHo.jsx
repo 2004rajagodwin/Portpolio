@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../ImageHo.css"; // We'll put the styles here
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
 
 
 import reo1 from '../assets/logo-reo-1.jpg'; 
@@ -21,23 +22,24 @@ import reo14 from '../assets/logo-reo-14.jpg';
 
 
 const ImageHo = () => {
+  useAOS(); // ✅ Initialize AOS
   return (
     <section className="new-ava-logo-con-section">
       <div className="container text-center">
-        <h2 className="new-ava-logo-con-section-h2">
-          <span className="new-ava-logo-con-section-sp">
+        <h2  data-aos="fade-up" className="new-ava-logo-con-section-h2">
+          <span className="new-ava-logo-con-section-sp" >
             Sectors Godwin Tech Helps{" "}
           </span>
           Shine Bright
         </h2>
-        <p className="new-ava-logo-con-section-pt">
+        <p  data-aos="fade-up" className="new-ava-logo-con-section-pt">
           As the best Web design company in Thirunelveli, it is capable of
           offering services to a wide range of industries.
         </p>
 
         <div className="row justify-content-center">
           {/* Left Column */}
-          <div className="col-md-5 text-start position-relative">
+          <div className="col-md-5 text-start position-relative" data-aos="fade-right">
             {[
               { name: "REAL ESTATE", img: reo1 },
               { name: "FOOD & RESTAURANTS", img:  reo2 },
@@ -57,7 +59,7 @@ const ImageHo = () => {
           </div>
 
           {/* Right Column */}
-          <div className="col-md-5 text-start position-relative">
+          <div className="col-md-5 text-start position-relative" data-aos="fade-left">
             {[
               { name: "E-COMMERCE", img:  reo8 },
               { name: "JEWELLERS", img: reo9},

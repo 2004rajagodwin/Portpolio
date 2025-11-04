@@ -6,9 +6,11 @@ import OurPro from '../components/OurPro';
 import ImageHo from '../components/ImageHo';
 import GodBlog from '../components/GodBlog';
 import GodServi from '../components/GodServi';
+import Godwcta from '../components/Godwcta';
+import GodwForm from '../components/GodwForm';
 
 
-
+  
 
 
 
@@ -39,16 +41,21 @@ const Home = () => {
 <About/>
 
 <WhyChooseBrick/>
-<OurPro/>
+<OurPro/> 
 <ImageHo/>
-<GodBlog/>
+
+
+<Godwcta/>
 <GodServi/>
 
+<GodBlog/>
+<GodwForm/>
 
 
 
 
-      <section className="section">
+
+      {/* <section className="section">
         <div className="container">
           <h2 className="section-title">What I Do</h2>
           <div className="skills-grid">
@@ -66,9 +73,22 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>  
+      </section>   */}
 
 
+
+<section>
+  {/* ✅ Floating WhatsApp Button */}
+<a
+  href="https://wa.me/916379362330"
+  className="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i className="bi bi-whatsapp"></i>
+</a>
+
+</section>
       
     </div>
 

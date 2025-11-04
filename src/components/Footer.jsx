@@ -3,25 +3,27 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import '../footer.css';
+import useAOS from "../components/aoss"; // ✅ Import reusable AOS hook
 
 
 const Footer = () => {
+  useAOS(); // ✅ Initialize AOS
     const isActive = (path) => (location.pathname === path ? "gt-active" : "");
   return (
     <footer className="ava-footer-section text-light pt-5 pb-4">
       <div className="container">
         <div className="row gy-4">
           {/* Company Info */}
-          <div className="col-md-3">
-            <h5 className="fw-bold">
+          <div className="col-lg-3 col-md-6 col-sm-12">
+            <h5  data-aos="zoom-in-up" className="fw-bold" id="godwin-logo">
               <span className="text-primary">Godwin</span> Tech
             </h5>
-            <p className="mt-3">
+            <p data-aos="fade-up" className="mt-3">
               Godwin Tech delivers creative digital experiences, empowering
               businesses with modern solutions that inspire growth, innovation,
               trust, and long-lasting impact globally.
             </p>
-            <div className="d-flex gap-3 mt-3">
+            <div className="d-flex gap-3 mt-3"  data-aos="zoom-in-up">
               <a href="#" className="ava-footer-social">
                 <FaFacebookF />
               </a>
@@ -35,23 +37,23 @@ const Footer = () => {
           </div>
 
           {/* Our Services */}
-          <div className="col-md-3 col-6">
+          <div className="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up">
             <h6 className="fw-semibold mb-3">Our Services</h6>
             <ul className="list-unstyled ava-footer-links">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Digital Marketing</a></li>
-              <li><a href="#">Web Hosting Solutions</a></li>
-              <li><a href="#">E-commerce Development</a></li>
-              <li><a href="#">Content Management Systems</a></li>
-              <li><a href="#">Website Maintenance</a></li>
-              <li><a href="#">Search Engine Optimization</a></li>
+              <li><Link to="/contact" className={isActive("/contact")}>Web Design</Link></li>
+              <li><Link to="/contact" className={isActive("/contact")}>Digital Marketing</Link></li>
+              <li><Link to="/contact" className={isActive("/contact")}>Web Hosting Solutions</Link></li>
+              <li><Link to="/contact" className={isActive("/contact")}>Content Management Systems</Link></li>
+              <li><Link to="/contact" className={isActive("/contact")}>E-commerce Development</Link></li>
+              <li><Link to="/contact" className={isActive("/contact")}>Website Maintenance</Link></li>
+              <li><Link to="/contact" className={isActive("/contact")}>Search Engine Optimization</Link></li>
             </ul>
           </div>
 
-             <div className="col-md-3 col-6">
+             <div className="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up">
             <h6 className="fw-semibold mb-3">Quick Links</h6>
             <ul className="list-unstyled ava-footer-links">
-              <li><a href="#">Home</a></li>
+              <li><Link to="/" className={isActive("/")}>Home</Link></li>
               <li><Link to="/about" className={isActive("/about")}>About Us</Link></li>
               <li><Link to="/Projects" className={isActive("/Project")}>Projects</Link></li>
               <li><Link to="/skills" className={isActive("/skills")}>Skills</Link></li>
@@ -61,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Resources & Location */}
-          <div className="col-md-3 col-6">
+          <div className="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up">
             <h6 className="fw-semibold mb-3">Our Location</h6>
             <address className="mb-3">
               2/242, Nallamalpuram,<br />
@@ -77,7 +79,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-center mt-5 pt-3 border-top border-secondary">
+        <div className="text-center mt-5 pt-3 border-top border-secondary" data-aos="fade-up">
           <p className="mb-1">
             Copyright © 2025 <strong>Godwin Tech</strong>. All rights reserved.
           </p>

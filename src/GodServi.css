@@ -1,5 +1,7 @@
 
-
+.why-ch-brick-main-section-boq{
+  margin-top: 60px;
+}
 
 
 .brick-new-ho-de-services {
@@ -73,7 +75,7 @@
   margin-bottom: 15px;
 }
 
-.brick-new-ho-de-card a {
+.brick-new-ho-de-card-btaa {
   display: inline-block;
   padding: 8px 18px;
   background: #0053d6;
@@ -87,7 +89,7 @@
 .text-warning-a{
     color: #0053d6;
 }
-.brick-new-ho-de-card a:hover {
+.brick-new-ho-de-card-btaa:hover {
   background: #0053d6;
 }
 
